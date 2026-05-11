@@ -1,0 +1,63 @@
+Type: Package
+Package: epicodr
+Title: Primary Coding for NAPKON data
+Version: 3.0.0
+Authors@R: 
+    c(person("Institut für Klinische Epidemiologie und Biometrie, Universitätsklinikum Würzburg, Germany", 
+             role=c("cph"),
+             email = "ecu@nukleus.netzwerk-universitaetsmedizin.de"),
+      person(given = "Carolin",
+             family = "Nürnberger",
+             role = c("aut"),
+             email = "nuernberge_c@ukw.de",
+             comment = c(ORCID = "0009-0007-1029-3707")),
+      person(given = "Mirjam",
+             family = "Kohls",
+             role = c("aut"),
+             email = "kohls_m@ukw.de"),
+      person(given = "Miriam",
+             family = "Rainers",
+             role = c("aut"),
+             email = "miriam.rainers@med.uni-goettingen.de"),
+      person(given = "Olga",
+             family = "Miljukov",
+             role = c("aut"),
+             email = "miljukov_o@ukw.de"),
+      person(given = "Klaus",
+             family = "Kammerer",
+             role = c("ctb", "cre"),
+             email = "kammerer_k@ukw.de",
+             comment = c(ORCID = "0000-0001-8998-0890"))
+      )
+Description: Import, primary coding and export functions for SUEP, HAP, POP data.
+License: MIT + file LICENSE
+URL: https://nukleus-ecu.github.io/epicodr/index.html
+BugReports: https://github.com/nukleus-ecu/epicodr/issues
+Depends: R (>= 3.4.0)
+Imports: tidyverse (>= 1.3.0), haven, readr, stringr, tibble, dplyr,
+        lubridate, rlang, magrittr, purrr, forcats, tidyr, tidyselect,
+        eq5d
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.2.3
+RemoteType: github
+RemoteHost: api.github.com
+RemoteRepo: epicodr
+RemoteUsername: nukleus-ecu
+RemoteRef: v2.11.0
+RemoteSha: e49c6374bb4de0e34c3aa5d24a10113a01273a95
+GithubRepo: epicodr
+GithubUsername: nukleus-ecu
+GithubRef: v2.11.0
+GithubSHA1: e49c6374bb4de0e34c3aa5d24a10113a01273a95
+NeedsCompilation: no
+Packaged: 2024-04-02 06:33:42 UTC; alre2380
+Author: Institut für Klinische Epidemiologie und Biometrie,
+    Universitätsklinikum Würzburg, Germany [cph],
+  Carolin Nürnberger [aut] (<https://orcid.org/0009-0007-1029-3707>),
+  Mirjam Kohls [aut],
+  Miriam Rainers [aut],
+  Olga Miljukov [aut],
+  Klaus Kammerer [ctb, cre] (<https://orcid.org/0000-0001-8998-0890>)
+Maintainer: Klaus Kammerer <kammerer_k@ukw.de>
+Built: R 4.3.2; ; 2024-04-02 06:33:44 UTC; windows

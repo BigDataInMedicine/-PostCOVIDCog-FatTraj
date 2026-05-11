@@ -1,0 +1,19 @@
+internal_name;publication_name;name_unit;publication_order;min_label;max_label;ylab;ymin;ymax;type;cohort;decimals
+ecu_moca_total_score;MoCA;;10;NA;NA;Total Score;15;30;dv;pop;0,2,0,2,0,0
+tmt_a_strict;TMT-A;;11;NA;NA;Total RT [sec];10;105;dv;pop;0,2,0,1,1,0
+tmt_b;TMT-B;;12;NA;NA;Total RT [sec];15;205;dv;pop;0,2,0,2,0,0
+average_rt_100;;PVT;13;NA;NA;Average RT [sec];20;52;dv;pop;0,2,0,1,0,0
+mfi_gen;MFI General;;14;NA;NA;Scale Score;4;20;dv;pop;NA
+mfi_phy;MFI Physical;;15;NA;NA;Scale Score;4;20;dv;pop;1,2,0,1,0,0
+mfi_men;MFI Mental;;16;NA;NA;Scale Score;4;20;dv;pop;0,2,0,1,0,0
+pcss;PCSS;;7;NA;NA;NA;NA;NA;pc;NA;
+med_treatment;Med. treatment;;8;false;true;NA;NA;NA;pc;NA;NA
+sick_days;Sick leave days [any/none];;9;false;true;NA;NA;NA;pc;NA;NA
+age;Age;[years];1;NA;NA;NA;NA;NA;risk;NA;NA
+female_gender;Female sex;;2;male;female;NA;NA;NA;risk;NA;NA
+bmi;BMI;;3;NA;NA;[kg/m2];NA;NA;risk;NA;NA
+edu_min_12;Education;[≥ 12 years];4;< 12 years;≥ 12 years;NA;NA;NA;risk;NA;NA
+hospitalized;Hospitalisation;;5;false;true;NA;NA;NA;risk;NA;NA
+intensive_care;Intensive Care Unit;;6;NA;NA;NA;NA;NA;NA;NA;NA
+cog_fun;Subj. Cogn. Imp.;;10;NA;NA;Scale Score;4;21;dv;suep;1,2,0,2,0,0
+days_since_inf;Days since positive test;;1;NA;NA;NA;NA;time;NA;NA

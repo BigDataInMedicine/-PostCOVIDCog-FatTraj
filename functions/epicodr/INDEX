@@ -1,0 +1,344 @@
+build_ards_df           Build dataframe with ARDS by imaging procedures
+build_pcs_score_suep_df_with_proms
+                        Create data frame with Symptom Complexes and
+                        Post-COVID variables with and without PROMs in
+                        Post-COVID-Score
+build_pcs_score_suep_df_without_proms
+                        Create data frame with Symptom Complexes and
+                        Post-COVID variables without PROMs in
+                        Post-COVID-Score
+build_suep_long_symptom_df
+                        Create long symptom data frame
+build_sy_parentform_merged_df
+                        Build symptom subform data frame (merged with
+                        parent forms)
+build_sy_parents_children_merged_df
+                        Build symptom subform data frame (merged with
+                        parent and cild forms)
+build_sy_subform_merged_df
+                        Build symptom subform data frame
+build_who_scale_hap     Calculate and categorize WHO-Scale
+build_who_scale_suep_df
+                        Calculate and categorize WHO-Scale
+calculate_6ils_total    Calculate Six Item Loneliness Scale (6 ILS) sum
+                        score
+calculate_bmi           Compute body mass index (BMI)
+calculate_brs_n         Calculate Brief Resilience Scale (BRS) number
+                        of answered questions
+calculate_brs_sum       Calculate Brief Resilience Scale (BRS) sum
+                        score
+calculate_brs_total     Calculate Brief Resilience Scale (BRS) total
+                        score
+calculate_cfq11_sum     Calculate Chalder Fatigue Scale (CFQ-11) sum
+                        score
+calculate_days_ecu      Calculate time span in days
+calculate_dn4_sum       Calculate Pain diagnostic questionnaire (DN-4 -
+                        Interview) sum score
+calculate_eq5d3l_proxy_index
+                        Calculate EQ5D-3L-Index (PROXY Version)
+calculate_eq5d3l_y_index
+                        Calculate EQ5D-3L-Index (Y Version)
+calculate_eq5d5l_index
+                        Calculate EQ5D-5L-Index
+calculate_eq5d5l_y_index
+                        Calculate EQ5D-5L-Index (Y Version)
+calculate_facitf_sum    Calculate Functional Assessment of Chronic
+                        Illness Therapy - Fatigue (FACIT-F) sum score
+calculate_full_years    Calculate full years from two dates
+calculate_gad7_sum      Calculate Generalized Anxiety Disorder 7
+                        (GAD-7) sum score
+calculate_pcs_score_suep
+                        Calculate PCS Score
+calculate_phq4_sum      Calculate Patient Health Questionnaire (PHQ 4)
+                        sum score
+calculate_phq8_sum      Calculate Patient Health Questionnaire
+                        Depression Scale 8 (PHQ 8) sum score
+calculate_pss_total     Calculate Perceived Stress Scale (PSS) sum
+                        score
+categorize_6ils_ecu     Categorize Six Item Loneliness Scale (6 ILS)
+categorize_apache2_score_ecu
+                        Categorize Acute Physiology And Chronic Health
+                        Evaluation (APACHE) Score
+categorize_barthel_ecu
+                        Categorize barthel index
+categorize_bloodpressure_ecu
+                        Categorize blood pressure
+categorize_bmi_ecu      Categorize BMI
+categorize_brs_ecu      Categorize Brief Resilience Scale (BRS)
+categorize_cfq11        Categorize Chalder Fatigue Scale (CFQ-11)
+categorize_dds_score_ecu
+                        Categorize delir Detection Score (DDS)
+categorize_dn4_ecu      Categorize Pain diagnostic questionnaire (DN-4
+                        - Interview)
+categorize_facitf_ecu   Categorize Functional Assessment of Chronic
+                        Illness Therapy - Fatigue (FACIT-F)
+categorize_gad7_ecu     Categorize Generalized Anxiety Disorder 7
+                        (GAD-7) sum score
+categorize_gcs_ecu      Categorize Glasgow Coma Scale
+categorize_heartfrequency_ecu
+                        Categorize heartfrequency
+categorize_horowitz_index_ecu
+                        Categorize Horowitz-Index (lung function)
+categorize_icdsc_score_ecu
+                        Categorize Intensive Care delir Screening
+                        Checklist (ICDSC)
+categorize_mmrc_ecu     Categorize modified Medical Research Council
+                        Dyspnea Scale (MMRC)
+categorize_moca_ecu     Categorize Montreal Cognitive Assessment (MoCA)
+categorize_news_score_ecu
+                        Categorize National Early Warning Score (NEWS)
+categorize_oxigensaturation_ecu
+                        Categorize oxigen saturation
+categorize_ph_ecu       Categorize pH of blood gas analysis
+categorize_phq4_ecu     Categorize Patient Health Questionnaire (PHQ 4)
+categorize_phq8_ecu     Categorize Patient Health Questionnaire
+                        Depression Scale 8 (PHQ 8)
+categorize_phq8_ecu_2   Categorize Patient Health Questionnaire
+                        Depression Scale 8 (PHQ 8) - 4 groups
+categorize_pss_ecu      Categorize Perceived Stress Scale (PSS)
+categorize_resp_rate_ecu
+                        Categorize respiration rate
+categorize_temp_ecu     Categorize body temperature
+dates_tsExport          Convert dates in NAPKON Transferstelle Export
+                        study data tables
+defactorize_tsExport    Remove factorized variables tsExport data.
+detect_other_symptom_of_complex
+                        Calculate symptom complex for Post Covid
+                        Syndrome Score (PCSS) calculation - for
+                        symptoms coded in "other"
+detect_symptom_complex
+                        Calculate symptom complex for Post Covid
+                        Syndrome Score (PCSS) calculation
+ecu_age_cat_3           Categorize age in three intervals
+ecu_age_cat_dec         Categorize age in decades
+factorize_tsExport      Factorize in NAPKON Transferstelle Export study
+                        data tables
+get_ecu_background_pop
+                        Primary codes migration background from
+                        nationality and country of birth
+label_tsExport          Set variable labels in NAPKON Transferstelle
+                        Export study data tables
+missing_labels_default
+                        Default value labels that are generally
+                        considered as missing value.
+missing_values_default
+                        Default numeric values generally considered as
+                        missing value.
+prepare_spss_export     Prepare SPSS Export
+primary_coding_hap      Primary coding HAP Data
+primary_coding_hap_age
+                        Primary coding age
+primary_coding_hap_apache2
+                        Primary coding for Acute Physiology And Chronic
+                        Health Evaluation (APACHE) Score
+primary_coding_hap_barthel_disc
+                        Primary coding Barthel index at discharge
+primary_coding_hap_barthel_pre
+                        Primary coding Barthel index prior to infection
+                        (baseline)
+primary_coding_hap_bmi
+                        Primary coding Body Mass Index (BMI)
+primary_coding_hap_clinical_params
+                        Primary coding clinical parameters
+primary_coding_hap_clinical_params_his
+                        Primary coding clinical parameters (historic)
+primary_coding_hap_dds
+                        Primary coding for Delirium Detection Score
+                        (DDS)
+primary_coding_hap_eq5d5l
+                        Primary coding EQ5D-5L-Index
+primary_coding_hap_icdsc
+                        Primary coding for Intensive Care Delirium
+                        Screening Checklist (ICDSC)
+primary_coding_hap_moca
+                        Primary cpding for Montreal Cognitive
+                        Assessment (MoCA)
+primary_coding_hap_news_first
+                        Primary coding for National Early Warning Score
+                        (NEWS)
+primary_coding_hap_who_scale
+                        Primary coding WHO-Scale
+primary_coding_pop      Primary coding POP Data
+primary_coding_pop_6ils
+                        Primary coding Six Item Loneliness Scale (6
+                        ILS)
+primary_coding_pop_6mwt
+                        6 Minute Walk Test (6MWT)
+primary_coding_pop_abd_overw
+                        Primary coding Body Mass Index (BMI)
+primary_coding_pop_age
+                        Primary coding age
+primary_coding_pop_bmi
+                        Primary coding Body Mass Index (BMI)
+primary_coding_pop_brs
+                        Primary coding Brief Resilience Scale (BRS)
+primary_coding_pop_cardio_params
+                        Primary coding cardiological parameters
+primary_coding_pop_clinical_params
+                        Primary coding Clinical Parameters
+primary_coding_pop_eq5d5l
+                        Primary coding EQ5D-5L-Index
+primary_coding_pop_facitf
+                        Primary coding Functional Assessment of Chronic
+                        Illness Therapy - Fatigue (FACIT-Fatigue Scale)
+primary_coding_pop_gad7
+                        Primary coding Generalized Anxiety Disorder 7
+                        (GAD-7)
+primary_coding_pop_gpaq_calc
+                        Primary coding GPAQ calculation
+primary_coding_pop_gpaq_post
+                        Primary coding Global Physical Activity
+                        Questionnaire (GPAQ) post COVID
+primary_coding_pop_gpaq_pre
+                        Primary coding Global Physical Activity
+                        Questionnaire (GPAQ) pre COVID
+primary_coding_pop_gpaq_vars_post
+                        Primary coding GPAQ variable/column selection
+                        for GPAQ post COVID
+primary_coding_pop_gpaq_vars_pre
+                        Primary coding GPAQ variable/column selection
+                        for GPAQ pre COVID
+primary_coding_pop_kccq
+                        Kansas City Cardiomyopathy Questionnaire (KCCQ)
+primary_coding_pop_migration
+                        Primary migration background
+primary_coding_pop_mmrc
+                        Primary coding modified Medical Research
+                        Council Dyspnea Scale (mMRC)
+primary_coding_pop_moca
+                        Primary coding Montreal Cognitive Assessment
+                        (MoCA)
+primary_coding_pop_phq8
+                        Primary coding Patient Health Questionnaire
+                        depession scale (PHQ-8)
+primary_coding_pop_pneumo_params
+                        Primary coding cardiological parameters
+primary_coding_pop_psqi
+                        Pittsburgh Sleep Quality Index (PSQI)
+primary_coding_pop_pss
+                        Primary coding Perceived Stress Scale (PSS)
+primary_coding_suep     Primary coding SUEP Data
+primary_coding_suep_6ils
+                        Primary coding Six Item Loneliness Scale (6
+                        ILS)
+primary_coding_suep_age
+                        Primary coding age
+primary_coding_suep_ards
+                        Primary coding for ARDS by imaging procedures
+primary_coding_suep_baseline_barthel
+                        Primary coding Barthel index prior to infection
+                        (baseline)
+primary_coding_suep_bmi
+                        Primary coding Body Mass Index (BMI)
+primary_coding_suep_brs
+                        Primary coding Brief Resilience Scale (BRS)
+primary_coding_suep_cfq11
+                        Primary coding Chalder Fatigue Scale (CFQ-11)
+primary_coding_suep_clinical_params
+                        Primary coding clinical parameters
+primary_coding_suep_dn4
+                        Primary coding Pain diagnostic Questionnaire
+                        (DN-4 - Interview)
+primary_coding_suep_eq5d3l_13t18p
+                        Primary coding EQ5D-3L-Index for children aged
+                        13-18 (PROXY Version)
+primary_coding_suep_eq5d3l_4p
+                        Primary coding EQ5D-3L-Index for children aged
+                        4 (PROXY Version)
+primary_coding_suep_eq5d3l_5t7p
+                        Primary coding EQ5D-3L-Index for children aged
+                        5-7 (PROXY Version)
+primary_coding_suep_eq5d3l_8p
+                        Primary coding EQ5D-3L-Index for children aged
+                        8 (PROXY Version)
+primary_coding_suep_eq5d3l_8y
+                        Primary coding EQ5D-3L-Index for children aged
+                        8 (Y Version)
+primary_coding_suep_eq5d3l_9t11p
+                        Primary coding EQ5D-3L-Index for children aged
+                        9-11 (PROXY Version)
+primary_coding_suep_eq5d3l_9t11y
+                        Primary coding EQ5D-3L-Index for children aged
+                        9-11 (Y Version)
+primary_coding_suep_eq5d5l
+                        Primary coding EQ5D-5L-Index
+primary_coding_suep_eq5d5l_12p
+                        Primary coding EQ5D-5L-Index for children aged
+                        12 (PROXY Version)
+primary_coding_suep_eq5d5l_12y
+                        Primary coding EQ5D-5L-Index for children aged
+                        12 (Y Version)
+primary_coding_suep_eq5d5l_13t18y
+                        Primary coding EQ5D-5L-Index for children aged
+                        13-18 (Y Version)
+primary_coding_suep_moca
+                        Primary coding MoCA
+primary_coding_suep_patient_barthel
+                        Primary coding Barthel index (patient status)
+primary_coding_suep_pcs_score
+                        Primary coding PCS-Score
+primary_coding_suep_phq4
+                        Primary coding Patient Health Questionnaire
+                        (PHQ-4)
+primary_coding_suep_pss
+                        Primary coding Perceived Stress Scale (PSS)
+primary_coding_suep_recode_promis_cogn_funct
+                        Primary coding PROMIS-29 Cognitive impairments
+                        items (recoding)
+primary_coding_suep_recode_promis_dysp
+                        Primary coding PROMIS-29 Dyspnoe items
+                        (recoding) adds the following columns to
+                        promext: ecu_pro_dysp_1, ecu_pro_dysp_2,
+                        ecu_pro_dysp_3, ecu_pro_dysp_4, ecu_pro_dysp_5,
+                        ecu_pro_dysp_6, ecu_pro_dysp_7, ecu_pro_dysp_8,
+                        ecu_pro_dysp_9, ecu_pro_dysp_10
+primary_coding_suep_recode_promis_phys
+                        Primary coding PROMIS-29 Physical Function
+                        items (recoding)
+primary_coding_suep_recode_promis_sleep
+                        Primary coding PROMIS-29 Sleep disturbance
+                        items (recoding)
+primary_coding_suep_recode_promis_social
+                        Primary coding PROMIS-29 Ability to participate
+                        in social roles and activities items (recoding)
+primary_coding_suep_who_scale
+                        Primary coding WHO-Scale
+read_tsExport           Read NAPKON Transferstelle export
+read_tsExport_raw       Load NAPKON Transferstelle export data from
+                        directory or zip file.
+recode_6ils             Recode Six Item Loneliness Scale (6 ILS) items
+recode_brs              Recode Brief Resilience Scale items
+recode_cfq11            Recode Chalder Fatigue Scale (CFQ-11) items
+recode_dn4              Recode Pain diagnostic questionnaire (DN-4 -
+                        Interview)
+recode_phq              Recode Patient Health Questionnaire items (PHQ)
+recode_promis29_phys_funct
+                        Recode PROMIS-29 Physical Function items
+recode_promis29_sleep   Recode PROMIS-29 Sleep disturbance items
+recode_promis29_social
+                        Recode PROMIS-29 Ability to participate in
+                        social roles and activities items
+recode_promis_cognitive
+                        Recode PROMIS-29 Cognitive impairments items
+recode_promis_dyspnoe   Recode PROMIS-29 Dyspnea items
+recode_pss              Recode Perceived Stress Scale (PSS) items
+remove_st_dates_tsExport
+                        Remove original secutrial date string variables
+                        from tsExport data.
+return_child_table_names_of_parent
+                        Return parent table name (for one parent table)
+return_children_table_names_of_parents
+                        Return parent table names (for two or more
+                        parent tables)
+return_parent_child_pairs
+                        Return parent table names (for two or more
+                        parent tables)
+set_id_names            Sets ID names and writes them into vectors
+spss_labelled_tsExport
+                        Add Value labels to tsExport data.
+spss_missings_tsExport
+                        Set Missing Values in tsExport.
+summarize_who_scale     Summarize WHO-Scale
+valuelabels_tsExport    Set value labels in NAPKON Transferstelle
+                        Export study data tables
+write_tsExport          Write tsExport exports to other formats
