@@ -58,7 +58,7 @@ dat_sel <- get_vars(
     "gec_diag_date.date", "pr_docudate.date", "date_m2", "pr_incl_date.date",
     "pcs_score_sum_with_proms_without_cog", "pcs_score_sum_with_proms",
     "work_incap",
-    "ecu_age", "gec_gender",
+    "ecu_age", "gec_gender","gec_ethnicity",
     "gec_height", "gec_weight", "graduation_school"
   ),
   dat,
@@ -121,6 +121,9 @@ dat_sel$gec_gender |> table() # 1 = female; 2 = male
 # Transform to logical (female = TRUE)
 dat_sel$female_gender_sec <- !as.logical(dat_sel$gec_gender - 1)
 dat_sel$female_gender_sec |> table() 
+
+# ethnicity
+dat_sel$gec_ethnicity_sec <- dat_sel$gec_ethnicity == 1 # "white/caucasian"
 
 # BMI: height 100 - 230  weight 35 - 230
 # Height
@@ -188,7 +191,7 @@ datIVS <- full_join(datIVS, dat_sel_red[dat_sel_red$mnpvislabel == "3M Follow-Up
 datIVS <- full_join(datIVS, any_or_NA_by_person(dat_sel_red, "id", "work_incap", "sick_days_sec"))
 # Age, gender, BMI, Education all from baseline
 datIVS <- full_join(datIVS, dat_sel_red[dat_sel_red$mnpvislabel == "Baseline",
-                                          c("id", "ecu_age", "female_gender_sec", "bmi_sec", "edu_min_12_sec")
+                                          c("id", "ecu_age", "female_gender_sec", "gec_ethnicity_sec", "bmi_sec", "edu_min_12_sec")
 ])
 # Hospitalization from eresid dataset
 datIVS <- left_join(datIVS, any_or_NA_by_person(dat$eresid, "id", "hospitalized_sec", "hospitalized_sec"))

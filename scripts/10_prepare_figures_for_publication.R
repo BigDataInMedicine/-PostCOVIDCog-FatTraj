@@ -446,7 +446,7 @@ model_overview  = model_overview +
   geom_hline(yintercept=0.95, color = grey_mark) 
 
 ggsave(
-  filename = paste0(plot_path, "/model_overview_tests.png"),
+  filename = paste0(plot_path, "/Figure1.svg"),
   plot = model_overview,
   width = 16, height = 22,
   units = "cm"
@@ -477,7 +477,7 @@ model_overview  = model_overview +
 
 
 ggsave(
-  filename = paste0(plot_path, "/model_overview_subj.png"),
+  filename = paste0(plot_path, "/Figure2.svg"),
   plot = model_overview,
   width = 16, height = 22,
   units = "cm"
@@ -531,7 +531,7 @@ alt_models_overview =
 
 
 ggsave(
-  filename = paste0(plot_path, "/alt_models_overview_tests.png"),
+  filename = paste0(plot_path, "/alt_models_overview_tests.svg"),
   plot = alt_models_overview,
   width = 16, height = 22,
   units = "cm"
@@ -563,7 +563,7 @@ alt_models_overview =
 
 
 ggsave(
-  filename = paste0(plot_path, "/alt_models_overview_subj.png"),
+  filename = paste0(plot_path, "/alt_models_overview_subj.svg"),
   plot = alt_models_overview,
   width = 16, height = 22,
   units = "cm"
@@ -590,7 +590,7 @@ single_class_overview  =
 
 
 ggsave(
-  filename = paste0(plot_path, "/single_classes_tests.png"),
+  filename = paste0(plot_path, "/single_classes_tests.svg"),
   plot = single_class_overview,
   width = 28, height = 14,
   units = "cm"
@@ -615,7 +615,7 @@ single_class_overview  =
 
 
 ggsave(
-  filename = paste0(plot_path, "/single_classes_subj.png"),
+  filename = paste0(plot_path, "/single_classes_subj.svg"),
   plot = single_class_overview,
   width = 28, height = 14,
   units = "cm"
@@ -665,7 +665,7 @@ fisher_plot <- ggplot(fisher_data, aes(test_a, test_b, fill = color)) +
 
 
 ggsave(
-  filename = paste0(plot_path, "/fisher_plot.png"),
+  filename = paste0(plot_path, "/Figure3.svg"),
   plot = fisher_plot,
   width = 7, height = 5)                                                                                                                   
 
@@ -778,10 +778,10 @@ fp_total_plot <- fp_total_plot +
   geom_segment(aes(x = 0.05, y = 0.95, xend = 0.2, yend = 0.95), color = "black") +
   geom_segment(aes(x = 0.25, y = 0.95, xend =1, yend = 0.95), color = "black")
 
-
 ggsave(
-  filename = paste0(plot_path, "/log_regression.png"),
+  filename = paste0(plot_path, "/Figure4.svg"),
   plot = fp_total_plot,
   width = 24, height = 33,
   units = "cm"
 )
+

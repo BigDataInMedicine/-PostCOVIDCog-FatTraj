@@ -47,9 +47,7 @@ small_cor = 0.2
 cohort = "pop"
 
 dv_names <- c("ecu_moca_total_score", "tmt_a_strict", "tmt_b", "average_rt_100", "mfi_gen", "mfi_men", "mfi_phy", "cog_fun")
-iv_names <- c( "age" ,"female_gender", "bmi","edu_min_12" , "hospitalized","pcss" , "sick_days" ,"med_treatment")
-
-
+iv_names <- c( "age" ,"female_gender", "female_sex", "bmi","edu_min_12" , "hospitalized","pcss" , "sick_days" ,"med_treatment")
 
 
 for (cohort in c("pop", "suep")){
@@ -158,4 +156,38 @@ for (cohort in c("pop", "suep")){
     # save table
     openxlsx::write.xlsx(cor_tab_total, paste0(tab_path, '/correlations_missings.xlsx'))
   }
+  
 }
+
+# --- mlm tables -------------------------------------------------------------
+
+
+for (dv_name in dv_names){
+  if(dv_name == "mfi_gen"){
+    next
+  }
+  mlm_tab <- data.frame()
+  mlm_res <- read.xlsx(file.path(tab_path, paste0("mlm_results_", dv_name, ".xlsx")))
+  for(pred in c("\\(Intercept)", iv_names)){ # add intercept and the others
+    if(any(grepl(pred, names(mlm_res)))){
+
+      without_pcs <- mlm_res[,grepl(paste0(pred,"_without_pcs"), names(mlm_res))]
+      
+      without_pcs <- apply(without_pcs, 1, function(x) {
+        x <- round_with_trailing_zero(x,2)
+        return(paste0(x[1]," (", x[2], ";", x[3], ")"))})
+      
+      
+      with_pcs <- mlm_res[,grepl(paste0(pred,"_with_pcs"), names(mlm_res))]
+      
+      with_pcs <- apply(with_pcs, 1, function(x) {
+        x <- round_with_trailing_zero(x,2)
+        return(paste0(x[1]," (", x[2], ";", x[3], ")"))})
+      
+      
+      mlm_tab <- rbind(mlm_tab, data.frame(pred = pred, class_compared = 1:length(with_pcs), with_pcs = with_pcs, without_pcs = without_pcs))
+    }
+  } 
+  openxlsx::write.xlsx(mlm_tab, paste0(tab_path, '/mlm_res_supplementaries_',dv_name,'.xlsx'))
+}
+

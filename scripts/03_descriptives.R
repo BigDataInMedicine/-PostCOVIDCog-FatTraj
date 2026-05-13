@@ -53,6 +53,7 @@ for (cohort in c("pop", "suep")) {
   # --- Number of visits per participant ---------------------------------------
   print("Descriptives for visit frequencies:")
   print(datDV$id %>% table %>% as.data.frame %>% describe)
+  print(paste("IQR:", datDV$id %>% table %>% IQR))
   
   # --- Days since infection ---------------------------------------------------
   print("Descriptives of days since infection:")

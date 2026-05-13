@@ -42,7 +42,7 @@ load(file.path(dat_path, "suep_processed_dataIV.RData"))
 # === Predictor models =========================================================
 
 all_pcs_indicators <- c("med_treatment", "sick_days", "pcss")
-all_risk_factors <- c("age", "female_gender", "bmi", "edu_min_12", "hospitalized")
+all_risk_factors <- c("age", "female_gender", "female_sex", "bmi", "edu_min_12", "hospitalized")
 
 dv_names <- c("ecu_moca_total_score", "tmt_a_strict", "tmt_b", "average_rt_100", "mfi_phy", "mfi_men", "cog_fun")
 

@@ -60,7 +60,7 @@ dat_sel <- get_vars(
     "kh_not_pc_fu", "kh_stat1_pc_fu", "kh_reha_fu", # treatment variables
     "gec_demo_age", "gec_gender",
     "gec_weight", "gec_eb_demo_gew", "gec_height", "gec_eb_demo_groe", # BMI variables
-    "schulabschl", "verl_beh1___2", "verl_beh1_int", "verl_beh1___3"
+    "schulabschl", "verl_beh1___2", "verl_beh1_int", "verl_beh1___3", "gec_ethnicity"
   ),
   dat,
   pids = TRUE, vlabs = TRUE, EBtoVO = TRUE
@@ -71,7 +71,6 @@ dat_sel <- data.frame(dat_sel)
 # Check the data
 dim(dat_sel) # 2025 x 42
 which(table(dat_sel$export_psn, dat_sel$mnpvislabel) > 1) # no duplicates
-
 
 
 # === Preprocessing ============================================================
@@ -141,8 +140,11 @@ show_invalid_values(dat_sel, "gec_demo_age", upper = 105, lower = 18)
 # Sex (variable is called gender, but patients are asked about their biological sex)
 dat_sel$gec_gender |> table() # 1 = female; 2 = male
 # Transform to logical (female = TRUE)
-dat_sel$female_gender_sec <- !as.logical(dat_sel$gec_gender - 1)
-dat_sel$female_gender_sec |> table() # female = TRUE; male = FALSE
+dat_sel$female_sex_sec <- !as.logical(dat_sel$gec_gender - 1)
+dat_sel$female_sex_sec |> table() # female = TRUE; male = FALSE
+
+# ethnicity
+dat_sel$gec_ethnicity_sec <- dat_sel$gec_ethnicity == 1 # "white/caucasian"
 
 # BMI: height 100 - 230  weight 35 - 230
 # Height
@@ -172,6 +174,7 @@ dat_sel$hospitalized_sec <- any_or_NA(dat_sel$verl_beh1___2, dat_sel$verl_beh1_i
 
 # intensive care unit
 dat_sel$intensive_care <- any_or_NA(dat_sel$verl_beh1___3, dat_sel$verl_beh1_int >=3)
+
 
 # --- Tukey outlier removal ----------------------------------------------------
 # All values are deleted that are outliers according to the tukey method with a multiplicator of 6
@@ -211,7 +214,7 @@ datDVP <- dat_sel_red[, c(
 datIVP <- data.frame(id = unique(dat_sel_red$id))
 # Age, gender, BMI, Education, hospitalization and pcs score all from visit 1
 datIVP <- full_join(datIVP, dat_sel_red[dat_sel_red$mnpvislabel == "Visite 1-EB/VO",
-                                          c("id", "gec_demo_age", "female_gender_sec", "bmi_sec", "edu_min_12_sec", "hospitalized_sec", "intensive_care", "pcss_custom")
+                                          c("id", "gec_demo_age", "female_sex_sec","gec_ethnicity_sec", "bmi_sec", "edu_min_12_sec", "hospitalized_sec", "intensive_care", "pcss_custom")
 ])
 # Sick days and medical treatment:
 # If one measurement per person is true, set true for every instance of this person
@@ -223,7 +226,7 @@ datIVP <- as.data.frame(apply(datIVP, 2, function(x) if (is.logical(x)) as.numer
 # rename the predictor variables for easier handling later
 datIVP <- rename(datIVP,
                   pcss = pcss_custom, med_treatment = med_treatment_pcs_sec, sick_days = sick_days_sec,
-                  age = gec_demo_age, female_gender = female_gender_sec, bmi = bmi_sec,
+                  age = gec_demo_age, female_sex = female_sex_sec, bmi = bmi_sec,
                   edu_min_12 = edu_min_12_sec, hospitalized = hospitalized_sec, intensive_care = intensive_care
 )
 
